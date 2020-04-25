@@ -1,4 +1,6 @@
 function generateMarkdown(data) {
+
+  //get the according license link from user's choice
   let license;
   switch (data.license) {
     case "GNU AGPLv3":

@@ -1,5 +1,10 @@
+//inquirer for ask user questions and store answers
 const inquirer = require("inquirer");
+
+//get the generatemarkdown function from generatemarkdown.js
 const generateMarkdown = require("./utils/generateMarkdown");
+
+//file system to create and write file
 const fs = require("fs");
 
 const questions = [
@@ -42,7 +47,7 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (error) => {
         if (error) throw error;
-        console.log("complete.");
+        console.log("Complete");
     });
 }
 
