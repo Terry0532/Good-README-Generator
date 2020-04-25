@@ -30,7 +30,7 @@ const questions = [
         name: "features"
     }, {
         type: "input",
-        message: "GitHub profile link.",
+        message: "Project repository link.",
         name: "githubLink"
     }, {
         type: "list",

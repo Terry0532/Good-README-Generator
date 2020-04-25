@@ -47,7 +47,7 @@ ${data.credit}
 ${data.features}
 
 ## Link
-[GitHub](${data.githubLink})
+[${data.projectName}](${data.githubLink})
 
 ## License
 [${data.license}](${license})`;
