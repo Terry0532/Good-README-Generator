@@ -26,8 +26,7 @@ function generateMarkdown(data) {
       license = "https://choosealicense.com/licenses/unlicense/";
   }
 
-  return `
-# ${data.projectName}
+  return `# ${data.projectName}
 ${data.projectDescription}
 
 - [Setup](#setup)
@@ -42,15 +41,14 @@ ${data.projectInstallation}
 ## Credit
 ${data.credit}
 
-##Features
+## Features
 ${data.features}
 
 ## Link
 [GitHub](${data.githubLink})
 
 ## License
-[${data.license}](${license})
-`;
+[${data.license}](${license})`;
 }
 
 module.exports = generateMarkdown;

@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
 
 const questions = [
     {
@@ -31,16 +32,24 @@ const questions = [
         message: "Chose your license.",
         name: "license",
         choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"]
+    }, {
+        type: "input",
+        message: "Name of this file?",
+        name: "fileName"
     }
 ];
 
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (error) => {
+        if (error) throw error;
+        console.log("complete.");
+    });
 }
 
 function init() {
     inquirer
         .prompt(questions)
-        .then(response => console.log(generateMarkdown(response)));
+        .then(response => writeToFile(response.fileName + ".md", generateMarkdown(response)));
 }
 
 init();
