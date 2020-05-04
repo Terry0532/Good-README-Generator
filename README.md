@@ -19,5 +19,9 @@ Simple to use.
 ## Link
 [Good-README-Generator](https://github.com/Terry0532/Good-README-Generator)
 
+## Screenshot
+
 ## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [MIT License](https://choosealicense.com/licenses/mit/)
