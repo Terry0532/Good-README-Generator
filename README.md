@@ -12,7 +12,9 @@ In terminal "npm i" to install necessary components. To run it, type "node index
 
 ## Credit
 Node.js
+
 Inquirer
+
 XMLHttpRequest
 
 ## Features
