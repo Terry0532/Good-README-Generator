@@ -33,6 +33,10 @@ const questions = [
         message: "Project repository link.",
         name: "githubLink"
     }, {
+        type: "input",
+        message: "Your GitHub user name?",
+        name: "githubID"
+    }, {
         type: "list",
         message: "Chose your license.",
         name: "license",

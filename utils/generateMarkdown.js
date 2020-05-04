@@ -1,4 +1,16 @@
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+
 function generateMarkdown(data) {
+
+  //get github link and avatar link
+  const request = new XMLHttpRequest();
+  let userLink, userAvaLink;
+  request.open('GET', `https://api.github.com/users/${data.githubID}`, false);
+  request.send(null);
+  if (request.status === 200) {
+    userLink = JSON.parse(request.responseText).url;
+    userAvaLink = JSON.parse(request.responseText).avatar_url;
+  }
 
   //get the according license link from user's choice
   let license;
@@ -35,6 +47,7 @@ ${data.projectDescription}
 - [Credit](#credit)
 - [Features](#features)
 - [Link](#link)
+- [Author](#author)
 - [License](#license)
 
 ## Setup
@@ -48,6 +61,11 @@ ${data.features}
 
 ## Link
 [${data.projectName}](${data.githubLink})
+
+## Author
+[${data.githubID}](${userLink})
+
+![image description](${userAvaLink})
 
 ## License
 [${data.license}](${license})`;
